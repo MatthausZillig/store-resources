@@ -20,6 +20,7 @@ mutation updateItems($orderFormId: String, $items: [OrderFormItemInput]) {
       parentItemIndex
       parentAssemblyBinding
       seller
+      cartIndex
       assemblyOptions {
         added {
           item {
@@ -73,32 +74,6 @@ mutation updateItems($orderFormId: String, $items: [OrderFormItemInput]) {
       countryCode
       currencyCode
       timeZone
-    }
-    itemMetadata {
-      items {
-        id
-        name
-        skuName
-        productId
-        refId
-        ean
-        imageUrl
-        detailUrl
-        assemblyOptions {
-          id
-          name
-          required
-          composition {
-            minQuantity
-            maxQuantity
-            items {
-              maxQuantity
-              initialQuantity
-              id
-            }
-          }
-        }
-      }
     }
   }
 }
